@@ -1,0 +1,200 @@
+// ul.nav
+// ul.nav-child // todo gibt es nicht mehr / kein unstyled kein small!
+
+// li .current .active
+// li .deeper .parent
+// li .alias-parent-active
+// li .divider
+
+nav {
+  z-index: 1000;
+
+  .nav-item.current {
+    // background: $color-brand-light;
+  }
+
+  .nav-item.active {
+    // background: $color-brand-light;
+  }
+
+  ul.nav {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    // display: block;
+    zoom: 1;
+
+    @include flex-display;
+    @include flex-flow(column nowrap);
+
+    ul {
+      //display: block;
+    }
+
+    li {
+      margin: 0;
+
+      a {
+        color: $color-brand-text;
+        // text-transform: uppercase;
+        -webkit-transition: all 0.3s ease-out;
+        transition: all 0.3s ease-out;
+        padding: 1em;
+        border-top: 1px solid $gainsboro-light;
+        border-bottom: 1px solid $gainsboro-light;
+        height: 3em;
+
+        @include flex-display;
+        @include align-items(center);
+
+        &:hover {
+          color: $color-brand-text;
+          background: $gainsboro-light !important;
+          text-decoration: none;
+        }
+
+        &:focus {
+          color: $color-brand-text;
+          background: $gainsboro-dark !important;
+        }
+
+        &:active {
+          color: $color-brand-text;
+          background: $gainsboro-dark !important;
+        }
+      }
+
+      &.deeper, &.parent {
+        @include flex-display;
+        @include flex-flow(row nowrap);
+        @include justify-content(space-between);
+
+        a {
+          @include flex-display;
+          @include flex-flow(row nowrap);
+          @include align-items(center);
+          width: 100%;
+
+        }
+
+        ul.sub {
+          display: none;
+        }
+
+        ul.sub-open {
+          display: block;
+          position: absolute;
+          width: 12em;
+          margin: 3em 0 0 3em;
+          right: .5em;
+          padding: .5em 0;
+          background: $smoke;
+          @include border-radius($baseBorderRadius);
+          border: 1px solid $gainsboro-light;
+          @include box-shadows(0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12));
+
+          a {
+            background: $gainsboro-lighter;
+            width: 100%;
+          }
+        }
+
+        button {
+          width: 3em;
+          min-width: 3em;
+          height: 3em;
+          font-size: 100%;
+          background-image: none;
+          color: $color-brand-text;
+          background-color: transparent;
+          padding: 0;
+          margin: 0;
+          -webkit-transition: background-color 0.2s ease-out;
+          transition: background-color 0.2s ease-out;
+          -webkit-tap-highlight-color: transparent;
+          border: none;
+          @include border-radius(0);
+          @include box-shadows(0 0 0 0 transparent, 0 0 0 0 transparent);
+
+          @include flex-display;
+          @include flex-flow(row nowrap);
+          @include justify-content(center);
+
+          &:hover {
+            color: $color-accent-text;
+            background-color: $color-link-hover;
+          }
+
+          &:focus {
+            color: $color-accent-text;
+            background-color: $color-link-focus;
+            outline: 0;
+          }
+
+          &:active {
+            color: $color-accent-text;
+            background-color: $color-link-active;
+          }
+
+          &:before {
+            @include flex-display;
+            @include align-self(center);
+
+            font-family: 'adhocicon';
+            font-style: normal;
+            font-weight: normal;
+            font-size: 1.5em;
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+          }
+
+          &.nav-menu {
+            &:before {
+              content: "\e608";
+            }
+          }
+
+          &.sub-open {
+            &:before {
+              content: "\e607";
+            }
+          }
+        }
+      }
+    }
+  }
+
+  ul.nav ul {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    z-index: 10000;
+
+    li a {
+      padding-left: 2.5em;
+    }
+
+    li {
+      text-align: left;
+
+      a {
+        padding: 1em;
+
+        &:after {
+          content: "" !important;
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 47em) {
+
+  ul.sub-open {
+    margin: 3em 0 0 12em !important;
+    right: -8.5em !important;
+  }
+}

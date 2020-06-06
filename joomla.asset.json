@@ -1,0 +1,41 @@
+{
+  "$schema": "https://developer.joomla.org/schemas/json-schema/web_assets.json",
+  "name": "scrapbook",
+  "version": "4.0.0",
+  "description": "Scrapbook is a Joomla 4.x site template",
+  "license": "GPL-2.0+",
+  "assets": [
+    {
+      "name": "template.scrapbook",
+      "type": "preset",
+      "dependencies": [
+        "template.scrapbook#style",
+        "template.scrapbook.bootstrap#style",
+        "template.scrapbook#script"
+      ]
+    },
+    {
+      "name": "template.scrapbook",
+      "type": "style",
+      "uri": "scrapbook.css"
+    },
+    {
+      "name": "template.scrapbook.bootstrap",
+      "type": "style",
+      "uri": "bootstrap.css",
+      "dependencies": [
+        "fontawesome"
+      ]
+    },
+    {
+      "name": "template.scrapbook",
+      "type": "script",
+      "uri": "",
+      "dependencies": [
+        "core",
+        "jquery-noconflict",
+        "bootstrap.js.bundle"
+      ]
+    }
+  ]
+}
