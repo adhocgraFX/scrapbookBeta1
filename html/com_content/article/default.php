@@ -30,6 +30,8 @@ $info    = $params->get('info_block_position', 0);
 // Check if associations are implemented. If they are, define the parameter.
 $assocParam = (Associations::isEnabled() && $params->get('show_associations'));
 ?>
+
+<!-- article versus div -->
 <article class="com-content-article item-page <?php echo $this->pageclass_sfx; ?>" itemscope
          itemtype="https://schema.org/Article">
     <meta itemprop="inLanguage"

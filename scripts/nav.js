@@ -20,8 +20,15 @@
 
     var navContainer = querySelector('.nav-container');
     var subSelect = querySelector('.sub');
-    var NavBtn = querySelector('.nav-menu');
     var main = querySelector('main');
+
+    if (document.querySelector('.nav-menu') !== null) {
+        // .. nav-menu exists
+        var NavBtn = querySelector('.nav-menu');
+    } else {
+        // .. exit function
+        return false;
+    }
 
     function closeMenu() {
         NavBtn.classList.remove('sub-open');
@@ -42,6 +49,4 @@
             closeMenu();
         }
     });
-
-
 })();
