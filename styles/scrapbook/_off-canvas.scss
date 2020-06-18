@@ -40,7 +40,9 @@ body {
   background-color: $color-brand;
   overflow: hidden;
   z-index: 2;
-  @include box-shadows(0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19));
+  border-bottom: 1px solid $color-brand-darker;
+
+  @include box-shadows(0 8px 17px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.15));
   -webkit-transform: translate(0, 0em);
   transform: translate(0, 0em);
 

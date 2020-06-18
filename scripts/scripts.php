@@ -74,6 +74,9 @@ $subnav = $this->params->get('js-subnav');
                 });
 
                 $ca_decline.click(function () {
+                    setCookie("acceptcookie", "no", 365);
+                    jQuery.post('<?php echo JURI::current(); ?>', 'set_cookie=0', function () {
+                    });
                     $ca_container.slideUp('slow');
                 });
             }

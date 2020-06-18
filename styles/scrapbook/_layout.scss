@@ -36,7 +36,7 @@ section.layout {
 .logo-image {
   overflow: hidden;
   height: 3em;
-  border-bottom: 1px solid $color-brand-darker;
+  // border-bottom: 1px solid $color-brand-darker;
 
   a {
     width: 100%;
@@ -266,7 +266,7 @@ section.bottom {
 
     main {
       margin: 0 auto;
-      @include flex(8);
+      @include flex(6);
 
       section.content {
         margin: .5em auto;
@@ -288,7 +288,7 @@ section.bottom {
       @include justify-content(flex-start);
       @include align-items(stretch);
       @include align-content(flex-start);
-      @include flex(5);
+      @include flex(3);
 
       .module,
       .search-container,
@@ -338,7 +338,7 @@ section.bottom {
 
             div.blog-item-content {
               width: 100%;
-              border-bottom: 0;
+              // border-bottom: 0;
 
               figure.item-image {
                 width: 100%;

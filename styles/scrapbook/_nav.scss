@@ -27,10 +27,6 @@ nav {
     @include flex-display;
     @include flex-flow(column nowrap);
 
-    ul {
-      //display: block;
-    }
-
     li {
       margin: 0;
 
@@ -193,8 +189,10 @@ nav {
 
 @media screen and (min-width: 47em) {
 
+  /*
   ul.sub-open {
     margin: 3em 0 0 12em !important;
     right: -8.5em !important;
   }
+  */
 }
