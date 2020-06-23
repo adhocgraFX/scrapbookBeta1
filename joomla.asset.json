@@ -36,6 +36,16 @@
         "jquery-noconflict",
         "bootstrap.js.bundle"
       ]
+    },
+    {
+      "name": "template.scrapbook.googlefont",
+      "type": "style",
+      "uri": "https://fonts.googleapis.com/css?family=Neucha|Patrick+Hand+SC"
+    },
+    {
+      "name": "searchtools",
+      "type": "style",
+      "uri": "system/searchtools/searchtools.min.css"
     }
   ]
 }

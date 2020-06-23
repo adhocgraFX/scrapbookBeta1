@@ -18,10 +18,6 @@
 
     var querySelector = document.querySelector.bind(document);
 
-    var navContainer = querySelector('.nav-container');
-    var subSelect = querySelector('.sub');
-    var main = querySelector('main');
-
     if (document.querySelector('.nav-menu') !== null) {
         // .. nav-menu exists
         var NavBtn = querySelector('.nav-menu');
@@ -29,6 +25,10 @@
         // .. exit function
         return false;
     }
+
+    var navContainer = querySelector('.nav-container');
+    var subSelect = querySelector('.sub');
+    var main = querySelector('main');
 
     function closeMenu() {
         NavBtn.classList.remove('sub-open');

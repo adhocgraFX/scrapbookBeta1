@@ -23,22 +23,9 @@ $app              = Factory::getApplication();
 
 $fullWidth = 1;
 
-// Add JavaScript Frameworks
-HTMLHelper::_('behavior.core');
-
-// Add Stylesheets
-// Load template CSS file
-HTMLHelper::_('stylesheet', 'template' . ($this->direction === 'rtl' ? '-rtl' : '') . '.css', ['version' => 'auto', 'relative' => true]);
-HTMLHelper::_('stylesheet', 'offline.css', ['version' => 'auto', 'relative' => true]);
-
-// Check for a custom CSS file
-HTMLHelper::_('stylesheet', 'user.css', ['version' => 'auto', 'relative' => true]);
-
-// Check for a custom js file
-HTMLHelper::_('script', 'user.js', ['version' => 'auto', 'relative' => true]);
-
-// Load optional RTL Bootstrap CSS
-HTMLHelper::_('bootstrap.loadCss', false, $this->direction);
+// Enable assets
+$wam = $this->getWebAssetManager();
+$wam->usepreset('template.scrapbook');
 
 // Logo file or site title param
 $sitename = htmlspecialchars($app->get('sitename'), ENT_QUOTES, 'UTF-8');

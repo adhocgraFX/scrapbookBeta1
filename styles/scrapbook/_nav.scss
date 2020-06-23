@@ -62,15 +62,14 @@ nav {
 
       &.deeper, &.parent {
         @include flex-display;
-        @include flex-flow(row nowrap);
+        @include flex-flow(row wrap);
         @include justify-content(space-between);
 
         a {
           @include flex-display;
           @include flex-flow(row nowrap);
           @include align-items(center);
-          width: 100%;
-
+          width: calc(100% - 3em);
         }
 
         ul.sub {
@@ -78,11 +77,10 @@ nav {
         }
 
         ul.sub-open {
-          display: block;
-          position: absolute;
-          width: 12em;
-          margin: 3em 0 0 3em;
-          right: .5em;
+          @include flex-display;
+          @include flex-flow(column nowrap);
+          @include align-items(center);
+          width: 100%;
           padding: .5em 0;
           background: $smoke;
           @include border-radius($baseBorderRadius);
@@ -91,6 +89,10 @@ nav {
 
           a {
             background: $gainsboro-lighter;
+            width: 100%;
+          }
+
+          li {
             width: 100%;
           }
         }
