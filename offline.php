@@ -24,8 +24,10 @@ $app              = Factory::getApplication();
 $fullWidth = 1;
 
 // Enable assets
-$wam = $this->getWebAssetManager();
-$wam->usepreset('template.scrapbook');
+$wa = $this->getWebAssetManager();
+$wa->usePreset('template.scrapbook');
+// register asset
+$wa->registerPreset('template.scrapbook');
 
 // Logo file or site title param
 $sitename = htmlspecialchars($app->get('sitename'), ENT_QUOTES, 'UTF-8');

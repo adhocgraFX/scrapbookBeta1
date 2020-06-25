@@ -14,8 +14,10 @@ use Joomla\CMS\HTML\HTMLHelper;
 /** @var JDocumentHtml $this */
 
 // Enable assets
-$wam = $this->getWebAssetManager();
-$wam->usepreset('template.scrapbook');
+$wa = $this->getWebAssetManager();
+$wa->usePreset('template.scrapbook');
+// register asset
+$wa->registerPreset('template.scrapbook');
 
 ?>
 

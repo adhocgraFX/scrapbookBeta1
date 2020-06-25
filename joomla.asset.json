@@ -10,19 +10,13 @@
       "type": "preset",
       "dependencies": [
         "template.scrapbook#style",
-        "template.scrapbook.bootstrap#style",
         "template.scrapbook#script"
       ]
     },
     {
       "name": "template.scrapbook",
       "type": "style",
-      "uri": "scrapbook.css"
-    },
-    {
-      "name": "template.scrapbook.bootstrap",
-      "type": "style",
-      "uri": "bootstrap.css",
+      "uri": "styles.css",
       "dependencies": [
         "fontawesome"
       ]
@@ -36,11 +30,6 @@
         "jquery-noconflict",
         "bootstrap.js.bundle"
       ]
-    },
-    {
-      "name": "template.scrapbook.googlefont",
-      "type": "style",
-      "uri": "https://fonts.googleapis.com/css?family=Neucha|Patrick+Hand+SC"
     },
     {
       "name": "searchtools",
