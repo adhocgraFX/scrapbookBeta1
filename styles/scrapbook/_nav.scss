@@ -60,6 +60,7 @@ nav {
         }
       }
 
+
       &.deeper, &.parent {
         @include flex-display;
         @include flex-flow(row wrap);
@@ -76,7 +77,7 @@ nav {
           display: none;
         }
 
-        ul.sub-open {
+        ul.sub-open, button.open + ul.sub {
           @include flex-display;
           @include flex-flow(column nowrap);
           @include align-items(center);
@@ -153,7 +154,7 @@ nav {
             }
           }
 
-          &.sub-open {
+          &.open {
             &:before {
               content: "\e607";
             }
