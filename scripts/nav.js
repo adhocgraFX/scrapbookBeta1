@@ -26,8 +26,6 @@
     if (x !== null) {
         // .. nav-menu exists
         var navButtons = document.querySelectorAll('.nav-menu');
-        var subSelect = document.querySelectorAll('.sub');
-
     } else {
         // .. exit function
         return false;
@@ -36,7 +34,6 @@
     function closeMenu() {
         for (i = 0; i < navButtons.length; i++) {
             navButtons[i].classList.remove('open');
-            subSelect[i].classList.remove('sub-open');
         }
     }
 
