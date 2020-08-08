@@ -14,7 +14,7 @@ div.items-row {
   background: transparent;
 }
 
-// article muss als html override vorhanden sein!
+// todo article muss als html override vorhanden sein!
 article {
   padding: .5em;
   margin: 0;
@@ -158,6 +158,13 @@ dl.article-info {
 
 .blog-item-content {
   border-bottom: 1px solid $gainsboro-light;
+}
+
+// item-content
+div.item-content {
+  margin: 0 auto;
+  padding: 1em;
+  max-width: 32em;
 }
 
 body.fifty {

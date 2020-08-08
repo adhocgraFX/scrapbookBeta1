@@ -17,9 +17,8 @@
     'use strict';
 
     var querySelector = document.querySelector.bind(document);
-
-    var sidebarContainer = querySelector('.sidebar-container');
     var body = document.body;
+    var sidebarContainer = querySelector('.sidebar-container');
     var appbarSelect = querySelector('.app-bar');
     var menuSidebarBtn = querySelector('.sidebar-menu');
     var main = querySelector('main');
@@ -38,7 +37,9 @@
     }
 
     main.addEventListener('click', closeMenu);
+
     menuSidebarBtn.addEventListener('click', toggleMenu);
+
     sidebarContainer.addEventListener('click', function (event) {
         if (event.target.nodeName === 'A' || event.target.nodeName === 'LI') {
             closeMenu();

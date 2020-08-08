@@ -1,5 +1,5 @@
 # Scrapbook
-## responsive Joomla! 4 beta 1 template
+## responsive Joomla! 4 beta 3 template
 ### work in progress
 ### Features:
 * adhocgrafx template styleguide:
