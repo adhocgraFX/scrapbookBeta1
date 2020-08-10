@@ -167,6 +167,28 @@ div.item-content {
   max-width: 32em;
 }
 
+// modal dialog im edit mode
+body.layout-edit {
+  section.content {
+    max-width: 100% !important;
+    margin: .5em;
+  }
+
+  div.modal-dialog {
+    max-width: 100% !important;
+    height: calc(100% - 1em);
+    margin: .5em;
+  }
+
+  div.modal-content {
+    height: 100%;
+  }
+
+  .iframe {
+    height: 100%;
+  }
+}
+
 body.fifty {
   section.main-container {
     max-width: 100% !important;

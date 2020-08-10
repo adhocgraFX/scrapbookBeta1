@@ -1,8 +1,39 @@
 /*
 template files compiled together
 bootstrap
-carcass
+carcass / scrapbook
  */
 
+// bootstrap
 @import "bootstrap/bootstrap";
+
+// scrapbook
 @import "scrapbook/scrapbook";
+
+/*
+ab hier: elemente aus cassiopeia
+ */
+// cassiopeia
+@import "vendor/awesomplete";
+@import "vendor/chosen";
+@import "vendor/dragula";
+@import "vendor/minicolors";
+@import "vendor/tinymce";
+@import "vendor/choices";
+
+// cassiopeia frontend editing
+@import "cassiopeia/cassiopeia-variables";
+@import "cassiopeia/form";
+@import "cassiopeia/frontend-edit";
+@import "cassiopeia/iframe";
+@import "cassiopeia/modals";
+
+// Chosen (TEMPORARY)
+.chzn-container-single {
+  width: auto !important;
+}
+
+.chzn-container-multi {
+  width: 100% !important;
+  max-width: 240px;
+}

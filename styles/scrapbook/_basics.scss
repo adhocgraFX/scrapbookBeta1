@@ -110,6 +110,10 @@ textarea[contenteditable] {
   visibility: hidden;
 }
 
+.hidden {
+  @include hidden;
+}
+
 /*
  * Hide only visually, but have it available for screenreaders: h5bp.com/v
  */
@@ -123,6 +127,10 @@ textarea[contenteditable] {
   padding: 0;
   position: absolute;
   width: 1px;
+}
+
+.visuallyhidden {
+  @include visuallyhidden;
 }
 
 /* TODO
@@ -142,12 +150,20 @@ textarea[contenteditable] {
   }
 }
 
+.visuallyhidden-focusable {
+  @include visuallyhidden-focusable;
+}
+
 /*
  * Hide visually and from screenreaders, but maintain layout
  */
 
 @mixin invisible {
   visibility: hidden;
+}
+
+.invisible {
+  @include invisible;
 }
 
 /**

@@ -2,7 +2,7 @@
 
 // vendor
 // normalize.css v3.0
-@import "vendor/normalize";
+@import "../vendor/normalize";
 
 // material design color palettes
 @import "palette";
@@ -18,7 +18,7 @@
 
 // vendor
 // pocketgrid and mixins
-@import "vendor/pocketgrid";
+@import "../vendor/pocketgrid";
 
 //
 // overrides and supplements
@@ -77,19 +77,11 @@
 
 // vendor
 // prism code highlighting
-@import "vendor/prism";
+@import "../vendor/prism";
 
 // flickity responsive slider
-@import "vendor/flickity";
+@import "../vendor/flickity";
 @import "gallery-overrides";
-
-// vendor
-// cassiopeia
-@import "vendor/awesomplete";
-@import "vendor/chosen";
-@import "vendor/dragula";
-@import "vendor/minicolors";
-@import "vendor/tinymce";
 
 //
 // last joomla specific overrides here:
