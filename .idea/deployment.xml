@@ -5,7 +5,7 @@
       <paths name="localxampp">
         <serverdata>
           <mappings>
-            <mapping local="$PROJECT_DIR$" web="joomla-4-beta-1/templates/scrapbook" />
+            <mapping local="$PROJECT_DIR$" web="joomla-4-beta/templates/scrapbook" />
           </mappings>
         </serverdata>
       </paths>

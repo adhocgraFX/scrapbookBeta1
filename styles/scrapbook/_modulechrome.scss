@@ -267,7 +267,8 @@ div.search-container {
 
   form.form-search {
     margin: 0;
-    // width: 100%;
+    width: 100%;
+
     // flex
     @include flex-display;
     @include align-items(center);
@@ -276,10 +277,10 @@ div.search-container {
       @include visuallyhidden;
     }
 
-    div.awesomplete {
+    .awesomplete {
       @include flex(1 1 auto);
       margin: 0;
-      width: 100% !important;
+      width: 100%;
 
       input {
         width: 100%;
