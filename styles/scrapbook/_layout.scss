@@ -139,6 +139,7 @@ section.layout {
 
 .main-container {
   background: $smoke;
+  min-height: calc(100vh - 6em); // minus header and breadcrumbs
 }
 
 main {
@@ -173,7 +174,7 @@ footer {
   background: $color-breadcrumbs-back;
   font-size: .75em;
   padding: 0 1em;
-  // height: 3em;
+  min-height: 3em;
 }
 
 section.slider-container {
@@ -260,9 +261,13 @@ section.bottom {
     @include justify-content(space-around);
     @include align-content(center);
     @include align-items(stretch);
+
     // max-width: 68em;
+    min-height: calc(100vh - 7em); // minus header(4em) and breadcrumbs(3em)
+
     float: none !important;
     margin: 0 auto;
+
 
     main {
       margin: 0 auto;

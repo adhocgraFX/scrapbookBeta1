@@ -128,21 +128,22 @@ $this->setMetaData('X-UA-Compatible', 'IE=edge', 'http-equiv');
             </section>
         </main>
     </section>
-</section>
 
-<section class="footer-wrapper block-group">
-    <!-- breadcrumbs -->
-	<?php if ($this->countModules('breadcrumbs')): ?>
-        <section class="breadcrumbs-container block-group" role="navigation">
-            <jdoc:include type="modules" name="breadcrumbs" style="none"/>
-        </section>
-	<?php endif; ?>
-    <!-- footer position -->
-	<?php if ($this->countModules('footer')): ?>
-        <footer class="block-group" role="contentinfo">
-            <jdoc:include type="modules" name="footer" style="footer"/>
-        </footer>
-	<?php endif; ?>
+    <!-- breadcrumbs and footer position -->
+    <section class="footer-wrapper">
+        <!-- breadcrumbs -->
+		<?php if ($this->countModules('breadcrumbs')): ?>
+            <section class="breadcrumbs-container block-group" role="navigation">
+                <jdoc:include type="modules" name="breadcrumbs" style="none"/>
+            </section>
+		<?php endif; ?>
+        <!-- footer position -->
+		<?php if ($this->countModules('footer')): ?>
+            <footer class="block-group" role="contentinfo">
+                <jdoc:include type="modules" name="footer" style="footer"/>
+            </footer>
+		<?php endif; ?>
+    </section>
 </section>
 
 <!-- to top -->
