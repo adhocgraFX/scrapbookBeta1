@@ -22,7 +22,7 @@
     }
 }());
 
-// sticky nav
+// sticky nav bzw. app-bar
 jQuery(document).ready(function () {
     var stickyNavTop = jQuery('.app-bar').offset().top;
 

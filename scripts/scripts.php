@@ -94,7 +94,7 @@ $subnav = $this->params->get('js-subnav');
     <script type="text/javascript" src="<?php echo $tpath . '/scripts/sidebar.js'; ?>"></script>
 <?php endif; ?>
 
-    <!-- go to top plus sticky nav -->
+    <!-- go to top plus sticky nav bzw. app-bar -->
     <script type="text/javascript" src="<?php echo $tpath . '/scripts/plugins.js'; ?>"></script>
 
     <!-- google analytics code asynchron + anonym -->

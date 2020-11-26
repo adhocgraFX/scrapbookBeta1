@@ -35,6 +35,9 @@ $tpath     = $this->baseurl . '/templates/' . $this->template;
 // logo
 $logo = $this->params->get('logo');
 
+// Register and attach/use a custom item in one run
+// $wa->registerAndUsePreset('template.scrapbook');
+
 // Enable assets
 $wa->usePreset('template.scrapbook');
 // register asset
