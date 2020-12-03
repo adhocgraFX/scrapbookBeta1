@@ -113,15 +113,23 @@ $this->setMetaData('X-UA-Compatible', 'IE=edge', 'http-equiv');
                 </nav>
 			<?php endif; ?>
             <!-- search position -->
-			<?php if ($this->countModules('search')): ?>
+	        <?php if ($this->countModules('search')): ?>
                 <div class="search-container">
                     <jdoc:include type="modules" name="search" style="none"/>
                 </div>
-			<?php endif; ?>
+	        <?php endif; ?>
             <!-- sidebar position -->
-			<?php if ($this->countModules('sidebar')): ?>
-                <jdoc:include type="modules" name="sidebar" style="jduo"/>
-			<?php endif; ?>
+	        <?php if ($this->countModules('sidebar')): ?>
+                <section class="sidebar" role="complementary">
+                    <jdoc:include type="modules" name="sidebar" style="jduo"/>
+                </section>
+	        <?php endif; ?>
+            <!-- footer position -->
+	        <?php if ($this->countModules('footer')): ?>
+                <footer role="contentinfo">
+                    <jdoc:include type="modules" name="footer" style="footer"/>
+                </footer>
+	        <?php endif; ?>
         </aside>
         <!-- main position -->
         <main role="main">
@@ -132,26 +140,18 @@ $this->setMetaData('X-UA-Compatible', 'IE=edge', 'http-equiv');
         </main>
     </section>
 
-    <!-- breadcrumbs and footer position -->
-    <section class="footer-wrapper">
-        <!-- breadcrumbs -->
-		<?php if ($this->countModules('breadcrumbs')): ?>
-            <section class="breadcrumbs-container block-group" role="navigation">
-                <jdoc:include type="modules" name="breadcrumbs" style="none"/>
-            </section>
-		<?php endif; ?>
-        <!-- footer position -->
-		<?php if ($this->countModules('footer')): ?>
-            <footer class="block-group" role="contentinfo">
-                <jdoc:include type="modules" name="footer" style="footer"/>
-            </footer>
-		<?php endif; ?>
-    </section>
+    <!-- breadcrumbs -->
+	<?php if ($this->countModules('breadcrumbs')): ?>
+        <section class="breadcrumbs-container" role="navigation">
+            <jdoc:include type="modules" name="breadcrumbs" style="none"/>
+        </section>
+	<?php endif; ?>
 </section>
 
 <!-- to top -->
 <a href="#" class="go-top"><span class="icon-chevron-up"></span>
-    <p hidden>Top</p></a>
+    <p hidden>Top</p>
+</a>
 <!-- debug position -->
 <jdoc:include type="modules" name="debug" style="none"/>
 

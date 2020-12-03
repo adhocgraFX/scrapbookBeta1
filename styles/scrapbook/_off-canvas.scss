@@ -344,12 +344,6 @@ body {
   transition: transform 0.3s ease-out;
 }
 
-.layout {
-  margin: 0 auto !important;
-  padding-top: 3em; // > Height of  header
-  min-height: #{"calc(100% - 3em)"}; // height of breadcrumbs
-}
-
 // Larger Screens / desktops / tablets
 @media all and (min-width: 47em) {
 
@@ -435,11 +429,6 @@ body {
     transform: translate(0, 0);
     -webkit-transition: none;
     transition: none;
-  }
-
-  .layout {
-    padding-top: 0;
-    min-height: #{"calc(100% - 3em)"}; // height of breadcrumbs
   }
 
   body {

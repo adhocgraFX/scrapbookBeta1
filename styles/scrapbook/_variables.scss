@@ -61,7 +61,8 @@ $color-brand-darker: darken($color-brand, 10%);
 // nav and aside colors
 $color-nav-back: transparent;
 $color-aside-back: $whitesmoke;
-
+// sidebar-pos in aside
+$color-sidebar-back: transparent;
 // link colors mit accent color in sync
 $color-link: $color-accent;
 $color-link-hover: lighten($color-link, 10%);

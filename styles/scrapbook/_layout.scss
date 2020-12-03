@@ -27,8 +27,11 @@ button.leftbar-menu {
   visibility: hidden
 }
 
+.layout {
+  margin: 0 auto !important;
+  padding-top: 3em; // > Height of  header
+  // min-height: #{"calc(100% - 3em)"}; // height of breadcrumbs
 
-section.layout {
   // @include flex(1 0 auto);
   // width: 100%;
 }
@@ -139,7 +142,7 @@ section.layout {
 
 .main-container {
   background: $smoke;
-  min-height: calc(100vh - 6em); // minus header and breadcrumbs
+  min-height: calc(100vh - 5em); // minus header and breadcrumbs
 }
 
 main {
@@ -169,12 +172,16 @@ footer {
   font-size: .875em;
 }
 
+.sidebar {
+  background: $color-sidebar-back;
+}
+
 .breadcrumbs-container {
   @include make-block;
   background: $color-breadcrumbs-back;
   font-size: .75em;
   padding: 0 1em;
-  min-height: 3em;
+  height: 3em;
 }
 
 section.slider-container {
@@ -206,7 +213,8 @@ section.bottom,
 section.inner-top,
 section.inner-bottom,
 section.slider-container,
-section.main-container {
+section.main-container,
+section.sidebar {
   @include make-block;
 }
 
@@ -214,7 +222,8 @@ footer,
 section.top,
 section.bottom,
 section.inner-top,
-section.inner-bottom {
+section.inner-bottom,
+section.sidebar {
   @include flex-display;
   @include flex-flow(row wrap);
   @include justify-content(center);
@@ -255,6 +264,11 @@ section.bottom {
 // media queries // 48 x 16 = 768
 @media screen and (min-width: 47em) {
 
+  .layout {
+    padding-top: 0;
+    // min-height: #{"calc(100% - 3em)"}; // height of breadcrumbs
+  }
+
   section.main-container {
     @include flex-display;
     @include flex-flow(row nowrap);
@@ -263,7 +277,7 @@ section.bottom {
     @include align-items(stretch);
 
     // max-width: 68em;
-    min-height: calc(100vh - 7em); // minus header(4em) and breadcrumbs(3em)
+    min-height: calc(100vh - 6em); // minus header(4em) and breadcrumbs(3em)
 
     float: none !important;
     margin: 0 auto;
