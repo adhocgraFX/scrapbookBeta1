@@ -2,7 +2,9 @@
 // ==================================================
 // neues module chrome mit material design colors
 .module, .module.white {
-  background: $whitesmoke;
+  // background: $whitesmoke;
+  background: transparent;
+
   display: block;
   font-size: .875em;
   // border: 1px solid $concrete;
